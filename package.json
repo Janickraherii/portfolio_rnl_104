@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.3.6"
+  },
+  "dependencies": {
+    "typewriter-effect": "^2.21.0"
+  }
+}

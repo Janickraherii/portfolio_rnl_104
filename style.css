@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+nav ul li{
+	padding: 3px 0;
+}
+
+body {
+	margin:0;
+	overflow-x:hidden;
+}
+
+.races {
+	width:fit-content;
+	display:flex;
+	flex-wrap:nowrap;
+}
+
+.races .card {
+	flex-shrink:0;
+	padding-right:0.3em;
+	padding-left:0.3em;
+
+	
+	margin:0;	
+}
+
+.races .card:last-of-type {
+	background:black;
+}
+
+
+.space-20vh {
+	height:20vh;
+}
+
+.space-30vh {
+	height:30vh;
+}
+
+.space-50vh {
+	height:50vh;
+}
+
+.space-100vh {
+	height:100vh;
+}
+
+
+/* Style glass*/
+.glass0 {/* From https://css.glass */
+	background: rgba(243, 143, 144, 0);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(243, 143, 144, 0.3);
+}
+.glass {
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.5);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.4px);
+-webkit-backdrop-filter: blur(8.4px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.glass1 {
+	/* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.7px);
+-webkit-backdrop-filter: blur(4.7px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.glasscircle {
+	/* From https://css.glass */
+width: 200px;
+height: 200px;
+background: rgba(243, 143, 144, 0.44);
+border-radius: 50%;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(243, 143, 144, 0.3);
+}
+/* Style glass*/
+
+
+/* Défilemen texte*/
+
+.container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+	background: white;
+}
+
+.txt{
+	margin-top: 10px;
+    white-space: pre;
+    font-size: 15px;
+    animation: Scroll 15s linear infinite;
+	color: black;
+}
+
+@keyframes Scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translate(-100%);
+    }
+}
+/* Défilemen texte*/
+
+
+/* Note that you only needs to edit the config to customize the button! */
+
+.plusButton {
+	/* Config start */
+	--plus_sideLength: 2.5rem;
+	--plus_topRightTriangleSideLength: 0.9rem;
+	/* Config end */
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid white;
+	width: var(--plus_sideLength);
+	height: var(--plus_sideLength);
+	background-color: #f38f90;
+	overflow: hidden;
+  }
+  
+  .plusButton::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-width: 0 var(--plus_topRightTriangleSideLength) var(--plus_topRightTriangleSideLength) 0;
+	border-style: solid;
+	border-color: transparent white transparent transparent;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+  }
+  
+  .plusButton:hover {
+	cursor: pointer;
+  }
+  
+  .plusButton:hover::before {
+	--plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+  }
+  
+  .plusButton:focus-visible::before {
+	--plus_topRightTriangleSideLength: calc(var(--plus_sideLength) * 2);
+  }
+  
+  .plusButton>.plusIcon {
+	fill: white;
+	width: calc(var(--plus_sideLength) * 0.7);
+	height: calc(var(--plus_sideLength) * 0.7);
+	z-index: 1;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.2s;
+  }
+  
+  .plusButton:hover>.plusIcon {
+	fill: black;
+	transform: rotate(180deg);
+  }
+  
+  .plusButton:focus-visible>.plusIcon {
+	fill: black;
+	transform: rotate(180deg);
+  }
+
+
+  /* animation popup button*/
+  .popup-container {
+	opacity: 0;
+  }
+
+  .popup-container.active{
+	opacity: 1;
+	pointer-events: auto;
+	transition: .4s ease;
+  }
+
+/*style for button github*/
+.Btngit {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	background-color: transparent;
+	position: relative;
+	/* overflow: hidden; */
+	border-radius: 7px;
+	cursor: pointer;
+	transition: all .3s;
+  }
+  
+  .svgContainer {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	backdrop-filter: blur(0px);
+	letter-spacing: 0.8px;
+	border-radius: 10px;
+	transition: all .3s;
+	border: 1px solid rgba(156, 156, 156, 0.466);
+  }
+  
+  .BG {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #181818;
+	z-index: -1;
+	border-radius: 10px;
+	pointer-events: none;
+	transition: all .3s;
+  }
+  
+  .Btngit:hover .BG {
+	transform: rotate(35deg);
+	transform-origin: bottom;
+  }
+  
+  .Btngit:hover .svgContainer {
+	background-color: rgba(156, 156, 156, 0.466);
+	backdrop-filter: blur(4px);
+  }
+  
+  /*style for button github*/
+  /*style for button linkedin*/
+  .Btnlink {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	background-color: transparent;
+	position: relative;
+	/* overflow: hidden; */
+	border-radius: 7px;
+	cursor: pointer;
+	transition: all 0.3s;
+  }
+  
+  .svgContainerlink {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	backdrop-filter: blur(0px);
+	letter-spacing: 0.8px;
+	border-radius: 10px;
+	transition: all 0.3s;
+	border: 1px solid rgba(156, 156, 156, 0.466);
+  }
+  
+  .BGlink {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #0077b5;
+	z-index: -1;
+	border-radius: 10px;
+	pointer-events: none;
+	transition: all 0.3s;
+  }
+  
+  .Btnlink:hover .BGlink {
+	transform: rotate(35deg);
+	transform-origin: bottom;
+  }
+  
+  .Btnlink:hover .svgContainer {
+	border: 1px solid rgba(216, 216, 216, 0.466);
+	background-color: rgba(190, 190, 190, 0.466);
+	backdrop-filter: blur(4px);
+  }
+  
+  /*style for button linkedin*/
+  /*style for button discord*/
+  .BtnDis {
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	background-color: transparent;
+	position: relative;
+	/* overflow: hidden; */
+	border-radius: 7px;
+	cursor: pointer;
+	transition: all 0.3s;
+  }
+  
+  .svgContainerDis {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	backdrop-filter: blur(0px);
+	letter-spacing: 0.8px;
+	border-radius: 10px;
+	transition: all 0.3s;
+	border: 1px solid rgba(156, 156, 156, 0.466);
+  }
+  
+  .BGDis {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #7289da;
+	z-index: -1;
+	border-radius: 10px;
+	pointer-events: none;
+	transition: all 0.3s;
+  }
+  
+  .BtnDis:hover .BGDis {
+	transform: rotate(35deg);
+	transform-origin: bottom;
+  }
+  
+  .BtnDis:hover .svgContainer {
+	border: 1px solid rgba(206, 206, 206, 0.466);
+	background-color: rgba(214, 214, 214, 0.466);
+	backdrop-filter: blur(4px);
+  }
+  
+  /*style for button discord*/
+
+/*boutton close*/
